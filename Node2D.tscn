@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://EscenaJugador.tscn" type="PackedScene" id=1]
+[ext_resource path="res://JugadorScript.gd" type="Script" id=2]
+
+[sub_resource type="TileSet" id=1]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 192.326, 258.172 )
+script = ExtResource( 2 )
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 5, 5 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 8, 8 )
+format = 1
+script = ExtResource( 2 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+scale = Vector2( 5, 5 )
